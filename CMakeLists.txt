@@ -20,4 +20,5 @@ set(SOURCES
 
 add_library(${TARGET} STATIC ${SOURCES} ${HEADERS})
 
-install(FILES ${HEADERS} DESTINATION include/tinycbor)
+install(FILES ${HEADERS} DESTINATION include/${TARGET})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lib${TARGET}.a DESTINATION lib)
