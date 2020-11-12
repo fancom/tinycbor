@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.13.1)
+project(tinycbor)
+
 set(TARGET tinycbor)
 
 set(SOURCE_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/src)
@@ -16,3 +19,5 @@ set(SOURCES
     ${SOURCE_PREFIX}/cborparser_dup_string.c)
 
 add_library(${TARGET} STATIC ${SOURCES} ${HEADERS})
+
+install(FILES ${HEADERS} DESTINATION include/tinycbor)
